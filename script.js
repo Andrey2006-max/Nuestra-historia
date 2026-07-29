@@ -164,4 +164,24 @@ function crearPetalo(){
 }
 
 
-setInterval(crearPetalo,800);
+setInterval(crearPetalo,800);// ==========================
+// Álbum de fotos ❤️📸
+// ==========================
+
+function abrirFoto(imagen){
+
+    const visor = document.getElementById("visor");
+    const fotoGrande = document.getElementById("fotoGrande");
+
+    fotoGrande.src = imagen.src;
+
+    visor.style.display = "flex";
+
+}
+
+
+function cerrarFoto(){
+
+    document.getElementById("visor").style.display = "none";
+
+}
