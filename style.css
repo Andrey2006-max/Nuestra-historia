@@ -136,6 +136,103 @@ body{
     grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
     gap:25px;
 }
+/* ===== GALERIA PELICULA ROMANTICA 🎬❤️ ===== */
+
+
+.foto-card{
+
+    background:white;
+
+    padding:15px;
+
+    border-radius:15px;
+
+    box-shadow:0 15px 35px rgba(0,0,0,0.4);
+
+    color:#333;
+
+    transform:rotate(-2deg);
+
+    transition:0.5s;
+
+    animation:entradaFoto 1s;
+
+}
+
+
+.foto-card:nth-child(even){
+
+    transform:rotate(2deg);
+
+}
+
+
+
+.foto-card:hover{
+
+    transform:scale(1.08) rotate(0deg);
+
+    z-index:5;
+
+}
+
+
+
+.foto-card img{
+
+    width:100%;
+
+    height:330px;
+
+    object-fit:cover;
+
+    border-radius:10px;
+
+}
+
+
+
+.foto-card h3{
+
+    margin-top:15px;
+
+    font-family:'Great Vibes',cursive;
+
+    font-size:32px;
+
+    color:#ff4d6d;
+
+}
+
+
+
+.foto-card p{
+
+    color:#555;
+
+    font-size:15px;
+
+}
+
+
+
+@keyframes entradaFoto{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(50px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+    }
+
+}
 
 .fotos img{
 
