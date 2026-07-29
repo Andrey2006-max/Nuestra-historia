@@ -104,3 +104,16 @@ document.getElementById("amor").addEventListener("click",()=>{
     },3000);
 
 });
+// ==========================
+// Música de nuestra historia 🎵
+// ==========================
+
+const musica = document.getElementById("musica");
+
+document.body.addEventListener("click", () => {
+
+    if (musica) {
+        musica.play().catch(() => {});
+    }
+
+}, { once: true });
