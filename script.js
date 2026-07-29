@@ -164,24 +164,41 @@ function crearPetalo(){
 }
 
 
-setInterval(crearPetalo,800);// ==========================
+setInterval(crearPetalo,800);
+// ==========================
 // Álbum de fotos ❤️📸
 // ==========================
 
 function abrirFoto(imagen){
 
+    console.log("Foto abierta");
+
     const visor = document.getElementById("visor");
     const fotoGrande = document.getElementById("fotoGrande");
 
-    fotoGrande.src = imagen.src;
+    if(visor && fotoGrande){
 
-    visor.style.display = "flex";
+        fotoGrande.src = imagen.src;
+
+        visor.style.display = "flex";
+
+    }else{
+
+        console.log("No existe el visor");
+
+    }
 
 }
 
 
 function cerrarFoto(){
 
-    document.getElementById("visor").style.display = "none";
+    const visor = document.getElementById("visor");
+
+    if(visor){
+
+        visor.style.display = "none";
+
+    }
 
 }
