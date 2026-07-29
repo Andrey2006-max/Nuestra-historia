@@ -38,8 +38,14 @@ setInterval(actualizarContador,1000);
 actualizarContador();
 
 
-// Botón comenzar
+// Botón comenzar con música 🎵
 function irHistoria(){
+
+    const musica = document.getElementById("musica");
+
+    if(musica){
+        musica.play();
+    }
 
     document.getElementById("historia").scrollIntoView({
         behavior:"smooth"
@@ -108,12 +114,16 @@ document.getElementById("amor").addEventListener("click",()=>{
 // Música de nuestra historia 🎵
 // ==========================
 
-const musica = document.getElementById("musica");
+function irHistoria(){
 
-document.body.addEventListener("click", () => {
+    const musica = document.getElementById("musica");
 
-    if (musica) {
-        musica.play().catch(() => {});
+    if(musica){
+        musica.play();
     }
 
-}, { once: true });
+    document.getElementById("historia").scrollIntoView({
+        behavior:"smooth"
+    });
+
+}
