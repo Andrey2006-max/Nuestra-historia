@@ -94,7 +94,10 @@ function crearCorazon(){
 }
 
 
-// Botón Te Amo
+// ==========================
+// Botón Te Amo ❤️
+// ==========================
+
 document.getElementById("amor").addEventListener("click",()=>{
 
     for(let i=0;i<150;i++){
@@ -105,25 +108,60 @@ document.getElementById("amor").addEventListener("click",()=>{
 
     setTimeout(()=>{
 
-        alert("❤️ Feliz Aniversario ❤️\n\nMaría Isabel...\n\nGracias por hacer mi vida más feliz.\n\nTe amo infinitamente.\n\nCon amor,\nAlan ❤️");
+        alert(
+        "❤️ Feliz Aniversario María Isabel ❤️\n\n" +
+        "Gracias por cada momento juntos.\n\n" +
+        "Gracias por tu amor, tu paciencia y tus sonrisas.\n\n" +
+        "Quiero seguir creando recuerdos contigo.\n\n" +
+        "Te amo muchísimo ❤️\n\n" +
+        "Con amor,\nAlan ❤️"
+        );
 
     },3000);
 
 });
+
+
 // ==========================
-// Música de nuestra historia 🎵
+// Pétalos de rosa 🌹
 // ==========================
 
-function irHistoria(){
+function crearPetalo(){
 
-    const musica = document.getElementById("musica");
+    const petalo = document.createElement("div");
 
-    if(musica){
-        musica.play();
-    }
+    petalo.innerHTML = "🌹";
 
-    document.getElementById("historia").scrollIntoView({
-        behavior:"smooth"
-    });
+    petalo.style.position = "fixed";
+    petalo.style.top = "-20px";
+    petalo.style.left = Math.random()*100 + "vw";
+    petalo.style.fontSize = (15 + Math.random()*20) + "px";
+    petalo.style.zIndex = "9999";
+    petalo.style.pointerEvents = "none";
+
+    document.body.appendChild(petalo);
+
+    let y = -20;
+
+    const caer = setInterval(()=>{
+
+        y += 3;
+
+        petalo.style.top = y + "px";
+
+        petalo.style.transform =
+        "rotate(" + y + "deg)";
+
+        if(y > window.innerHeight){
+
+            clearInterval(caer);
+            petalo.remove();
+
+        }
+
+    },30);
 
 }
+
+
+setInterval(crearPetalo,800);

@@ -138,13 +138,34 @@ body{
 }
 
 .fotos img{
-    width:100%;
+
+    width:220px;
+    height:260px;
+    object-fit:cover;
+
     border-radius:20px;
-    transition:.4s;
+
     cursor:pointer;
-    box-shadow:0 10px 25px rgba(0,0,0,.4);
+
+    transition:0.5s;
+
+    box-shadow:0 10px 25px rgba(0,0,0,0.3);
+
 }
 
+
+.fotos img:hover{
+
+    transform:scale(1.08);
+
+}
+
+
+.fotos img:active{
+
+    transform:scale(1.15);
+
+}
 .fotos img:hover{
     transform:scale(1.05);
 }
